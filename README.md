@@ -44,21 +44,20 @@ gulp lpush-install
 在 "deviceReady" 方法中初始化 LeanCloud(比如 $ionicPlatform.ready)
 
 #### ionic2.0+
+
+在 `app.component.ts` 最开头填写如下语句，防止 typescript 编译报错。
+
 ```js
 declare var window: any;
-```
-```js
-window.LeanPush.init();
 ```
 
 ### 推送相关文档
 Leancloud Push 开发指南](https://leancloud.cn/docs/ios_push_guide.html).
 
 #### 初始化接口
+
 ```js
-window.LeanPush.subscribe(channel, success, error)  // 订阅频道 channel :string 
-window.LeanPush.unsubscribe(channel, success, error) //退订频道 channel :string
-window.LeanPush.clearSubscription(success, error) //退订所有频道 
+window.LeanPush.init();
 ```
 
 #### 注册 Installation 
@@ -73,6 +72,14 @@ window.LeanPush.getInstallation(function(data){
      }
 }, function(error) {
 }); 
+```
+
+#### 操作订阅频道
+
+```js
+window.LeanPush.subscribe(channel, success, error)  // 订阅频道 channel :string 
+window.LeanPush.unsubscribe(channel, success, error) //退订频道 channel :string
+window.LeanPush.clearSubscription(success, error) //退订所有频道 
 ```
 
 #### 接受推送消息
