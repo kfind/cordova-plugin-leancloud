@@ -9,7 +9,7 @@ cordova-plugin-leanpush
 ### 从源代码安装
 
 ```shell
-cordova plugin add https://github.com/leancloud/cordova-plugin-leanpush.git  --variable LEAN_APP_ID=<你的 App Id> --variable LEAN_APP_KEY=<你的 App Key> --save
+cordova plugin add https://github.com/leancloud/cordova-plugin-leancloud.git  --variable LEAN_APP_ID=<你的 App Id> --variable LEAN_APP_KEY=<你的 App Key> --save
 ```
 
 
